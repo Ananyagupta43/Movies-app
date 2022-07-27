@@ -102,19 +102,21 @@ body {
   margin-bottom: 20px;
 }
 .main .tabs .tab {
-  background: #fff;
+  background:black;
   padding: 10px;
   margin-right: 13px;
-  border-radius: 3px;
-  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  border: 1px solid black;
+  color:white;
 }
 .active-tabs {
-  background: #2185d0 !important;
-  color: white;
+  background: rgb(161, 159, 159) !important;
+  color: rgb(7, 7, 7);
 }
 .main .tabs .tab:hover {
   cursor: pointer;
-  background: #e1e1e1;
+  background: rgb(20, 20, 20);
+  border: 1px solid rgb(20, 20, 20);
 }
 .movie-card {
   background: #fff;
@@ -132,6 +134,7 @@ body {
 }
 .movie-card .left {
   flex: 1;
+  height: 250px
 }
 .movie-card .left img {
   height: 250px;
@@ -144,9 +147,10 @@ body {
   padding: 10px 20px;
   font-size: 25px;
   font-weight: 600;
+  padding-top: 40px;
 }
 .movie-card .plot {
-  margin-top: 20px;
+  margin-top: 5px;
   padding: 0 20px;
 }
 .footer {
@@ -157,6 +161,8 @@ body {
   width: 100%;
   padding: 10px 20px;
   box-sizing: border-box;
+  color: #161616;
+  
 }
 .footer .rating {
   font-size: 20px;
@@ -171,8 +177,11 @@ body {
   font-weight: 600;
 }
 .favourite-btn {
-  background-color: #2185d0;
+  
+    height: 33px;
   color: #fff;
+  background-color:#645858;
+
 }
 .unfavourite-btn {
   background-color: #db2828;
@@ -183,4 +192,10 @@ body {
   padding: 20px 0;
   font-size: 20px;
   color: #6d6d6d;
+}
+
+.description{
+  padding: 5px 20px;
+  font-size: 18px;
+  font-weight: 500;
 }
