@@ -13,8 +13,8 @@ function App() {
       <div className="tab">Favourites</div>
       </div>
       <div className="list">   {/*This is a list each movie cart will come inside this. */}
-    {data.map(movie=>(   
-             <MovieCard movie={movie}/>
+    {data.map((movie,index)=>(   
+             <MovieCard movie={movie} key={'movies${index}'}/> //using this to make key unique
       ))}        {/* Each data inside data file is considered as a movie and it will be an object  */}
       </div>
     </div>
