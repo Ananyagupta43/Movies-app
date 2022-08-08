@@ -1,9 +1,10 @@
 import React from "react";
-import {data} from '../data';
+// import {data} from '../data';
 import  Navbar from './Navbar';
 import MovieCard from "./MovieCard";
 
-function App() {
+function App(props) {
+  const movies=props.store.getState();
   return (
     <div className="App" style={styles.App}>
     <Navbar/>
@@ -13,8 +14,8 @@ function App() {
       <div className="tab">Favourites</div>
       </div>
       <div className="list">   {/*This is a list each movie cart will come inside this. */}
-    {data.map((movie,index)=>(   
-             <MovieCard movie={movie} key={'movies${index}'}/> //using this to make key unique
+    {movies.map((movie,index)=>(   
+             <MovieCard movie={movie} key={`movies-${index}`}/>
       ))}        {/* Each data inside data file is considered as a movie and it will be an object  */}
       </div>
     </div>
