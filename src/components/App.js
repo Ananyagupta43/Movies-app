@@ -2,7 +2,7 @@ import React from "react";
 import {data} from '../data';
 import Navbar from './Navbar';
 import MovieCard from "./MovieCard";
-import {addMovies} from '../actions/index'
+import {addMovies,addFavMovies} from '../actions/index'
 
 class App extends React.Component {
    componentDidMount(){
@@ -30,7 +30,7 @@ class App extends React.Component {
           </div>
           <div className="list">   {/*This is a list each movie cart will come inside this. */}
             {list.map((movie, index) => (
-              <MovieCard movie={movie} key={`movies-${index}`} />
+              <MovieCard movie={movie} key={`movies-${index}`}  />
             ))}        {/* Each data inside data file is considered as a movie and it will be an object  */}
           </div>
         </div>
