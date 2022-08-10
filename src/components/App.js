@@ -2,6 +2,7 @@ import React from "react";
 import {data} from '../data';
 import Navbar from './Navbar';
 import MovieCard from "./MovieCard";
+import {addMovies} from '../actions/index'
 
 class App extends React.Component {
    componentDidMount(){
@@ -12,16 +13,13 @@ class App extends React.Component {
      console.log('new update'); 
      this.forceUpdate();
     })
-   // console.log(this.props.store.getState());
-        store.dispatch({
-    type:'ADD_MOVIES',
-    movies:data
-
-     })
+    console.log(this.props.store.getState());
+        store.dispatch(addMovies(data))
    console.log(this.props.store.getState());
      }
   render() {
-    const movies = this.props.store.getState();
+    const {list} = this.props.store.getState();   // {list:[] favourites:[]}   
+       console.log(this.props.store.getState());
     return (
       <div className="App" style={styles.App}>
         <Navbar />
@@ -31,7 +29,7 @@ class App extends React.Component {
             <div className="tab">Favourites</div>
           </div>
           <div className="list">   {/*This is a list each movie cart will come inside this. */}
-            {movies.map((movie, index) => (
+            {list.map((movie, index) => (
               <MovieCard movie={movie} key={`movies-${index}`} />
             ))}        {/* Each data inside data file is considered as a movie and it will be an object  */}
           </div>
