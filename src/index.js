@@ -8,15 +8,15 @@ import movie from './reducers';
 
 const store=createStore(movie);
 console.log(store);
-console.log('STATE Before',store.getState());
+// console.log('STATE Before',store.getState());
 
-store.dispatch({
-    type:'ADD_MOVIES',
-    movies:[{name:'Superman'},
-           {name:'Spiderman'}]
+// store.dispatch({
+//     type:'ADD_MOVIES',
+//     movies:[{name:'Superman'},
+//            {name:'Spiderman'}]
 
-})
-console.log('STATE after',store.getState());
+// })
+// console.log('STATE after',store.getState());
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   
