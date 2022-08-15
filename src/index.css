@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #f1f1f1;
+  background-color: rgb(167, 25, 32);
 }
 .nav {
   background: black;
@@ -106,17 +106,16 @@ body {
   padding: 10px;
   margin-right: 13px;
   border-radius: 5px;
-  border: 1px solid black;
   color:white;
+  margin-bottom: 10px;
 }
 .active-tabs {
-  background: rgb(161, 159, 159) !important;
+  background: rgb(44, 43, 43) !important;
   color: rgb(7, 7, 7);
 }
 .main .tabs .tab:hover {
   cursor: pointer;
   background: rgb(20, 20, 20);
-  border: 1px solid rgb(20, 20, 20);
 }
 .movie-card {
   background: #fff;
