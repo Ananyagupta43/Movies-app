@@ -1,3 +1,5 @@
+import {combineReducers}  from 'redux';
+
 import {ADD_MOVIES,ADD_FAVOURITES,REMOVE_FROM_FAVOURITES,SHOW_MOVIES} from '../actions';
 
 const initialMovieState={
@@ -39,11 +41,16 @@ const initialRootState = {
   movies:initialMovieState,
   search:initailSearchState
 };
-export default function rootReducer (state=initialRootState,action){
-  return {
-    movies:movie(state.movies,action),   //rootreducer will have the movies reducer and search reducer inside it
-    search:search(state.search,action)
-  };
-}
+// export default function rootReducer (state=initialRootState,action){
+//   return {
+//     movies:movie(state.movies,action),   //rootreducer will have the movies reducer and search reducer inside it
+//     search:search(state.search,action)
+//   };
+// }
+
+export default combineReducers({
+  movies:movie,
+  search:search
+})
 // we will move this to other file 
 // const ADD_MOVIES='ADD_MOVIES' // rather than string comparisons we will use this variable
