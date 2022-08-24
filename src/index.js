@@ -5,7 +5,13 @@ import { createStore } from 'redux';
 import App from './components/App';
 import rootReducer from './reducers';
 
-
+const logger=function({dispatch,getStatus}){
+return function(next){
+    return function(action){
+        
+    }
+}
+}       //it will console log the action type
 const store=createStore(rootReducer);
 //console.log(store);
 // console.log('STATE Before',store.getState());
