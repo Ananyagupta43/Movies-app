@@ -8,7 +8,8 @@ import rootReducer from './reducers';
 const logger=function({dispatch,getStatus}){
 return function(next){
     return function(action){
-        
+       //middleware code
+       console.log('ACTION_TYPE'+action.type ) 
     }
 }
 }       //it will console log the action type
