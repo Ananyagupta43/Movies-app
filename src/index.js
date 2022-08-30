@@ -5,15 +5,20 @@ import { createStore,applyMiddleware } from 'redux';
 import App from './components/App';
 import rootReducer from './reducers';
 
-const logger=function({dispatch,getStatus}){
-return function(next){
-    return function(action){
-       //middleware code
+// const logger=function({dispatch,getStatus}){
+// return function(next){
+//     return function(action){
+//        //middleware code
+//        console.log('ACTION_TYPE '+action.type ) 
+//     next(action);   // this is equivalent to calling another middleware 
+//     }
+// }
+// }       //it will console log the action type
+
+const logger=({dispatch,getStatus})=>(next)=>(action)=>{   //middleware modification
        console.log('ACTION_TYPE '+action.type ) 
-    next(action);   // this is equivalent to calling another middleware 
-    }
+     next(action);
 }
-}       //it will console log the action type
 const store=createStore(rootReducer,applyMiddleware(logger));
 //console.log(store);
 // console.log('STATE Before',store.getState());
