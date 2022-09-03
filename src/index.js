@@ -5,6 +5,8 @@ import { createStore,applyMiddleware } from 'redux';
 import App from './components/App';
 import rootReducer from './reducers';
 
+// here we are using currying for logger with {obj,next,action} as arguments
+
 // const logger=function({dispatch,getStatus}){
 // return function(next){
 //     return function(action){
